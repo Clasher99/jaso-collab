@@ -1,1 +1,75 @@
-body{color: lightgray;}
+html{
+    width: 100%;
+    /*overflow: hidden;*/
+}
+
+body{background-color: lightgray;
+margin: 0;
+/*overflow: hidden;*/
+}
+
+.general-navbar{
+    background-color: #010b1c;
+    width: 100%;
+    height: 5%;
+    top: 0;
+}
+
+.main-body-div{
+    margin: 2%;
+}
+
+.navbar-div{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.nav-title-div{
+    padding-right: 35%;
+}
+
+#nav-title{
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 28pt;
+}
+
+.nav-sections-div{
+    padding: 1% 5%;
+    width: 40%;
+}
+
+.nav-sections{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-jaso-item{
+    padding: 0% 7%;
+
+}
+
+.individual-nav-link{
+    color: white;
+    font-size: 16pt;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.individual-nav-link:hover{
+    font-weight: 500;
+    color:#b5cffc;
+
+}
+
+.nav-title-link{
+    text-decoration: none;
+    color: white;
+}
