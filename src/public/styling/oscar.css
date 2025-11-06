@@ -8,7 +8,7 @@
 body {
     background-color: white;
     height: 100vh;
-    overflow: hidden;
+    overflow: hidden visible;
 }
 
 main * {
@@ -34,4 +34,7 @@ h1 {
 }
 p {
     padding: 3px;
+}
+.secondary {
+    padding: 30px;
 }
