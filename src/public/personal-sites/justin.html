@@ -4,59 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Justin — Intro</title>
-    <style>
-        :root{
-            --bg:#0f1724; --card:#0b1220; --accent:#06b6d4; --muted:#93a6b2; --text:#e6f0f3;
-            --radius:12px; --glass: rgba(255,255,255,0.02);
-        }
-        *{box-sizing:border-box}
-        html,body{height:100%}
-        body{
-            margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
-            background:linear-gradient(180deg,#071021 0%, #071827 60%); color:var(--text);
-            -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-            line-height:1.45; padding:32px;
-        }
-        .wrap{max-width:980px;margin:0 auto}
-        header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-        .brand{display:flex;align-items:center;gap:12px}
-        .logo{
-            width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#5eead4);
-            display:flex;align-items:center;justify-content:center;color:#022; font-weight:700; font-size:20px;
-            box-shadow:0 6px 20px rgba(6,182,212,0.12);
-        }
-        nav a{color:var(--muted); text-decoration:none;margin-left:14px;font-size:15px}
-        nav a:hover{color:var(--text)}
-        main{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px}
-        .hero{
-            background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);
-            padding:28px;border-radius:var(--radius);backdrop-filter: blur(6px);
-            box-shadow:0 6px 30px rgba(2,6,23,0.6);
-        }
-        .hero h1{margin:0 0 6px 0;font-size:28px}
-        .hero p{margin:0 0 16px;color:var(--muted)}
-        .cta{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;
-                 background:var(--accent); color:#022; text-decoration:none; font-weight:600}
-        .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
-        .profile{
-            display:flex;align-items:center;gap:14px;margin-bottom:8px
-        }
-        .avatar{
-            width:72px;height:72px;border-radius:14px;background:linear-gradient(135deg,#0ea5a4,#0891b2);
-            display:flex;align-items:center;justify-content:center;font-weight:700;color:#022;font-size:24px;
-        }
-        h3{margin:0 0 6px 0}
-        .muted{color:var(--muted);font-size:14px}
-        ul.skills{list-style:none;padding:0;margin:12px 0 0 0;display:flex;flex-wrap:wrap;gap:8px}
-        ul.skills li{background:var(--glass);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
-        form{display:flex;flex-direction:column;gap:10px;margin-top:8px}
-        input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:var(--text)}
-        input::placeholder,textarea::placeholder{color:rgba(230,240,243,0.45)}
-        textarea{min-height:100px;resize:vertical}
-        .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#022;text-decoration:none;border:0;cursor:pointer;font-weight:600}
-        footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
-        @media (max-width:900px){ main{grid-template-columns:1fr} }
-    </style>
+    <!-- page styles: general + custom justin styles -->
+    <link rel="stylesheet" href="../styling/general.css">
+    <link rel="stylesheet" href="../styling/justin.css">
 </head>
 <body>
     <div class="wrap">
@@ -69,30 +19,41 @@
                 </div>
             </div>
             <nav>
+                <a href="../index.html">Home</a>
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
+                <a href="https://github.com/Justin-CODING-PY" target="_blank" rel="noopener">GitHub</a>
             </nav>
         </header>
 
         <main>
             <section class="hero card" id="about">
-                <h1>Hi — I'm Justin.</h1>
-                <p class="muted">I build clean, accessible web experiences with a focus on performance and clarity. I enjoy turning ideas into approachable interfaces.</p>
+                <h1 class="fade-in">Hi — I'm Justin.</h1>
+                <p class="muted">I'm a coder who loves building things for the web — from small, fast landing pages to accessible component-driven applications. I focus on clean HTML, modern CSS, and practical JavaScript.</p>
 
-                <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">
-                    <a class="cta" href="#contact">Work with me</a>
+                <div class="hero-actions">
+                    <!-- Work with me opens mail client with a prefilled subject/body (change email in script below) -->
+                    <a class="cta" href="#" onclick="workWithMe(event)">Work with me</a>
+                    <!-- Download opens a printable resume page (use browser Print -> Save as PDF) -->
                     <a class="btn" href="#" onclick="downloadResume(event)">Download resume</a>
+                    <a class="btn" href="https://github.com/Justin-CODING-PY" target="_blank" rel="noopener">View GitHub</a>
                 </div>
 
-                <h3 style="margin-top:20px">Current focus</h3>
+                <h3 class="fade-in" style="margin-top:20px">Current focus</h3>
                 <p class="muted">Component-driven UI, accessible forms, and small, maintainable codebases.</p>
+
+                <div class="photo-grid">
+                    <img alt="Justin coding" src="https://github.com/Justin-CODING-PY.png" class="profile-photo" />
+                    <img alt="project screenshot 1" src="https://source.unsplash.com/collection/9511232/400x300" />
+                    <img alt="project screenshot 2" src="https://source.unsplash.com/collection/190727/400x300?code" />
+                </div>
             </section>
 
             <aside>
                 <div class="card">
                     <div class="profile">
-                        <div class="avatar">J</div>
+                        <div class="avatar"><img src="https://github.com/Justin-CODING-PY.png" alt="Justin avatar" /></div>
                         <div>
                             <div style="font-weight:700">Justin</div>
                             <div class="muted">Based anywhere • Available for freelance</div>
@@ -111,6 +72,9 @@
                         <input name="email" placeholder="Your email" type="email" required />
                         <textarea name="message" placeholder="What do you have in mind?" required></textarea>
                         <button class="btn" type="submit">Email Justin</button>
+                        <div style="margin-top:10px">
+                            <a href="https://github.com/Justin-CODING-PY" target="_blank" rel="noopener" class="muted">View my GitHub profile</a>
+                        </div>
                     </form>
                 </div>
             </aside>
@@ -121,6 +85,8 @@
         </footer>
     </div>
 
+    <!-- jsPDF: generate a downloadable PDF on demand -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script>
         // Smooth internal link scrolling
         document.querySelectorAll('a[href^="#"]').forEach(a=>{
@@ -134,22 +100,77 @@
         document.getElementById('contactForm').addEventListener('submit', function(e){
             e.preventDefault();
             const f = e.target;
-            const name = encodeURIComponent(f.name.value.trim());
-            const email = encodeURIComponent(f.email.value.trim());
-            const message = encodeURIComponent(f.message.value.trim());
             const subject = encodeURIComponent('Intro from ' + (f.name.value || 'Website'));
             const body = encodeURIComponent(
                 "Name: " + (f.name.value || '') + "\nEmail: " + (f.email.value || '') + "\n\n" + (f.message.value || '')
             );
+            // TODO: replace justin@example.com with your real email
             window.location.href = `mailto:justin@example.com?subject=${subject}&body=${body}`;
         });
 
-        // Resume button: placeholder to download a resume file if provided
+        // Work with me button: opens mail client with a short work inquiry template
+        function workWithMe(e){
+            e.preventDefault();
+            const to = 'justin@example.com'; // replace with your real email
+            const subject = encodeURIComponent('Work inquiry from website');
+            const body = encodeURIComponent('Hi Justin,%0D%0A%0D%0AI saw your site and would like to discuss a project. Here is a short description:%0D%0A%0D%0A');
+            window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+        }
+
+        // Resume button: generate a PDF on the client using jsPDF
         function downloadResume(e){
             e.preventDefault();
-            // Replace the URL below with your actual resume file path (PDF)
-            const resumeUrl = 'resume.pdf';
-            window.location.href = resumeUrl;
+            try{
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF({unit:'pt',format:'letter'});
+                const left = 40;
+                let y = 60;
+                doc.setFontSize(20);
+                doc.text('Justin — Frontend developer', left, y);
+                y += 28;
+                doc.setFontSize(12);
+                const summary = "I build clean, accessible web experiences with a focus on performance and clarity. I work with modern HTML, CSS, and JavaScript to build practical, maintainable interfaces.";
+                wrapText(doc, summary, left, y, 500, 16);
+                y += 60;
+                doc.setFontSize(14);
+                doc.text('Skills', left, y);
+                y += 18;
+                doc.setFontSize(12);
+                doc.text('HTML · CSS · JavaScript · React · Accessibility · Performance', left, y);
+                y += 28;
+                doc.setFontSize(14);
+                doc.text('Experience', left, y);
+                y += 18;
+                doc.setFontSize(12);
+                const exp = 'Personal projects and freelance work focused on building accessible UI components and performant front-end experiences. See GitHub for project details: https://github.com/Justin-CODING-PY';
+                wrapText(doc, exp, left, y, 500, 14);
+                // footer/contact
+                doc.setFontSize(10);
+                doc.text('Email: justin@example.com', left, 720);
+                doc.text('GitHub: https://github.com/Justin-CODING-PY', left + 250, 720);
+                doc.save('Justin_Resume.pdf');
+            }catch(err){
+                // fallback: open printable resume page
+                window.open('resume.html', '_blank');
+            }
+        }
+
+        // small helper to wrap text in jsPDF
+        function wrapText(doc, text, x, y, maxWidth, lineHeight){
+            const words = text.split(' ');
+            let line = '';
+            for(let n = 0; n < words.length; n++){
+                const testLine = line + words[n] + ' ';
+                const metrics = doc.getTextWidth(testLine) * (doc.internal.getFontSize() / 12);
+                if(metrics > maxWidth && n > 0){
+                    doc.text(line.trim(), x, y);
+                    line = words[n] + ' ';
+                    y += lineHeight;
+                } else {
+                    line = testLine;
+                }
+            }
+            if(line) doc.text(line.trim(), x, y);
         }
     </script>
 </body>
