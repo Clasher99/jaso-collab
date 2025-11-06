@@ -22,22 +22,16 @@ main * {
     flex-direction: column;
 }
 .hero {
-    padding: 150px 0;
+    padding: 150px 30px;
     align-items: center;
     overflow: hidden;
     position: relative;
+    background: linear-gradient(135deg, #667eea, #764ba2);
 }
-.ball1 {
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    width:  300px;
-    height: 300px;
-    background-color: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
-    box-shadow: 0 8px 30px rgba(2, 6,23, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(8px) saturate(120%);
-    border: 1px solid rgba(255,255,255,0.06);
-    mix-blend-mode: screen;
-    transform: translateZ(0);
-    border-radius: 50%;
+h1 {
+    margin: 10px;
+    padding: 10px;
+}
+p {
+    padding: 3px;
 }
