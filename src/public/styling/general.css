@@ -56,6 +56,10 @@ margin: 0;
 
 }
 
+#individual-link-highlight-link{
+    color: #074dc5;
+}
+
 .individual-nav-link{
     color: white;
     font-size: 16pt;
@@ -73,3 +77,4 @@ margin: 0;
     text-decoration: none;
     color: white;
 }
+

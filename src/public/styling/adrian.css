@@ -1,0 +1,70 @@
+.main-heading{
+    font-family: Charter;
+    font-size: 24pt;
+    font-style: italic;
+}
+
+.main-sections-div{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.information-div{
+    width: 50%;
+    padding: 2%;
+}
+
+.information-text{
+    font-size: 14pt;
+}
+
+
+.contact-div{
+    width: 35%;
+    padding: 1%;
+    background-color: #bcbcbc;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #aaaaaa;
+}
+
+.contact-info-div{
+
+    display:flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.contact-title{
+    font-size: 22pt;
+    font-weight: 700;
+    margin: 0.5% 0.5% 5% 0.5%;
+    font-family: Charter;
+}
+
+.connection-section{
+    padding: 1%;
+    margin: 2% 0%;
+}
+
+.connection-link{
+    text-decoration: none;
+    target: new;
+}
+
+.contact-link-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.contact-link-text{
+    color: grey;
+    padding: 1% 4%;
+    font-family: Charter;
+    font-size: 14pt;
+    font-weight: 200;
+    font-style: oblique;
+}
